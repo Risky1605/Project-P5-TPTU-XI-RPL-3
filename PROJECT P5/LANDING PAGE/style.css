@@ -1,0 +1,402 @@
+/* font  */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap");
+
+/* font selesai */
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* root */
+:root {
+  --warna-pertama: #41a7f5;
+  --warna-kedua: #64b7f6;
+  --warna-ketiga: #90cbf9;
+  --warna-keempat: #fff;
+  --warna-kelima: #0747a1;
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(IMG/skensagedung2\ 1.png);
+  background-size: cover !important;
+  backdrop-filter: blur(25px);
+  background-repeat: no-repeat;
+  /* overflow: hidden; */
+  height: 120vh;
+  gap: 20px;
+}
+
+/* Navbar */
+
+
+body nav {
+	width: 100%;
+	background-color: var(--warna-pertama);
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+}
+
+/* logo */
+nav #logo {
+	width: 25%;
+	/* border: 1px solid black; */
+}
+
+nav #logo img {
+	width: 70px;
+}
+
+/* linking */
+nav #linking {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	/* border: 1px solid black; */
+}
+
+nav #linking .linking-menu {
+	transition: all 0.4s;
+	position: relative;
+	display: block;
+	font-size: 1.6rem;
+	padding: 1rem;
+	/* border: 1px solid black; */
+	text-decoration: none;
+	color: var(--warna-kelima);
+}
+
+nav #linking .linking-menu div {
+	display: flex;
+	gap: 0.6rem;
+}
+
+nav #linking .linking-menu div:after {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 0.6rem;
+	border-radius: 20px;
+	background-color: var(--warna-keempat);
+	left: 0%;
+	bottom: -10%;
+	transition: all 0.4s;
+}
+
+nav #linking .linking-menu:hover {
+	color: var(--warna-keempat);
+}
+
+nav #linking .linking-menu:hover div:after {
+	width: 100%;
+}
+
+/* reg and log */
+nav #reg-and-log,
+nav #reg-and-log1 {
+	width: 25%;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 2rem;
+	padding: 1rem;
+	/* border: 1px solid black; */
+}
+
+nav #reg-and-log .btn-reg,
+nav #reg-and-log1 .btn-reg {
+	padding: 1rem;
+	width: 50%;
+	height: 100%;
+	border-radius: 0.4rem;
+	text-wrap: nowrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+nav #reg-and-log #btn1,
+nav #reg-and-log1 #btn1 {
+	border: 2px solid var(--warna-kelima);
+	color: var(--warna-keempat);
+	background-color: var(--warna-kelima);
+}
+
+nav #reg-and-log #btn2,
+nav #reg-and-log1 #btn2 {
+	border: 2px solid var(--warna-keempat);
+	color: var(--warna-kelima);
+	background-color: var(--warna-keempat);
+}
+
+/* menu res */
+nav #menu-res {
+	position: relative;
+	/* border: 1px solid black; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+nav #menu-res .menu {
+	width: 80%;
+	height: 80%;
+}
+
+nav #menu-res #linking-res {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	top: 100%;
+	right: 0;
+	width: 500%;
+	background-color: var(--warna-keempat);
+	border: 0.1rem solid var(--warna-kelima);
+	border-radius: 0.4rem;
+}
+
+nav #menu-res #linking-res a {
+	padding: 2.2rem 2.5rem;
+	font-size: 1.5rem;
+	text-decoration: none;
+	transition: all 0.3s;
+	color: var(--warna-kelima);
+}
+
+nav #menu-res #linking-res a:hover {
+	background-color: var(--warna-kelima);
+	color: var(--warna-keempat);
+}
+
+nav #menu-res #linking-res a div {
+	display: flex;
+	gap: 0.5rem;
+}
+
+nav #menu-res #linking-res #reg-and-log {
+	/* border: 1px solid black; */
+	width: 100%;
+}
+
+nav #menu-res #linking-res #reg-and-log button {
+	padding: 1rem;
+}
+
+nav #menu-res #linking-res #reg-and-log #btn2 {
+	border: 0.1rem solid var(--warna-kelima);
+}
+
+
+/* Navbar end */
+
+/* back button */
+.back-btn {
+  /* position: fixed; */
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Angkatan */
+.angkatan {
+  /* margin-top: px; */
+  gap: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0.1);
+}
+
+.angkatan span {
+  color: var(--warna-kelima);
+  text-shadow: none;
+  font-weight: 800;
+}
+
+.angkatan-1 {
+  margin-top: 50px;
+  gap: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0.1);
+}
+
+/* div Kelas x */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 40px;
+  width: 100%;
+  /* margin-bottom: 30px; */
+}
+
+/* Angkatan TPTU */
+.x-tptu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border: none;
+  color: #fff;
+  background-color: var(--warna-kedua);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 260px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.x-tptu:hover {
+  height: 120px;
+}
+
+.x-tptu .icon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* list Option */
+.options {
+  color: #fff;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+}
+
+.options .option-text {
+  width: 100px;
+  height: 30px;
+  transition: all 0.3s;
+  padding: 5px 10px;
+}
+
+.options .option-text:hover {
+  border-radius: 8px;
+  width: 600px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: var(--warna-kelima);
+  padding: 20px;
+  text-align: center;
+  color: var(--warna-keempat);
+  display: grid;
+  justify-content: space-between;
+  padding: 4rem;
+  display: grid;
+  grid-template-areas: 
+    "atas atas"
+    "bawah bawah"
+  ;
+  grid-template-columns: 1fr;
+}
+
+
+footer #wrapper-all {
+  width: 100%;
+  grid-area: atas;
+  display: flex; 
+  justify-content: space-evenly;
+  gap:4rem ;
+}
+
+footer .data {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+footer .wrapper-data {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* border: 1px solid black; */
+  gap: 1rem;
+}
+
+footer .wrapper-data h3 {
+   width: 100%;
+   text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-aroun;
+}
+footer li {
+  margin: 0 10px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .copyright {
+  width: inherit;
+  grid: bawah;
+  display: flex;
+  justify-content: center;
+  background-color: var(--warna-kelima);
+  margin-top: 20px;
+  font-size: 14px;
+  /* border: 1px solid black; */
+  padding: 1rem;
+}
+
+

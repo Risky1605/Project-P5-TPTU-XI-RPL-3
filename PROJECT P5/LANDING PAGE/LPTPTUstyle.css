@@ -1,0 +1,918 @@
+/* font  */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap");
+
+/* font selesai */
+
+.lato-regular {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.poppins-medium {
+	font-family: "Poppins", serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+:root {
+	--warna-pertama: #41a7f5;
+	--warna-kedua: #64b7f6;
+	--warna-ketiga: #90cbf9;
+	--warna-keempat: #fff;
+	--warna-kelima: #0747a1;
+	font-size: 10px;
+}
+
+/* style  */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+body {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	min-width: 391px;
+}
+
+/* navbar */
+
+body nav {
+	width: 100%;
+	background-color: var(--warna-pertama);
+	display: flex;
+	justify-content: space-between;
+	padding: 1.9rem;
+}
+
+/* logo */
+nav #logo {
+	width: 25%;
+	/* border: 1px solid black; */
+}
+
+nav #logo img {
+	width: 70px;
+}
+
+/* linking */
+nav #linking {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	/* border: 1px solid black; */
+}
+
+nav #linking .linking-menu {
+	transition: all 0.4s;
+	position: relative;
+	display: block;
+	font-size: 1.6rem;
+	padding: 1rem;
+	/* border: 1px solid black; */
+	text-decoration: none;
+	color: var(--warna-kelima);
+}
+
+nav #linking .linking-menu div {
+	display: flex;
+	gap: 0.6rem;
+}
+
+nav #linking .linking-menu div:after {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 0.6rem;
+	border-radius: 20px;
+	background-color: var(--warna-keempat);
+	left: 0%;
+	bottom: -10%;
+	transition: all 0.4s;
+}
+
+nav #linking .linking-menu:hover {
+	color: var(--warna-keempat);
+}
+
+nav #linking .linking-menu:hover div:after {
+	width: 100%;
+}
+
+/* reg and log */
+nav #reg-and-log,
+nav #reg-and-log1 {
+	width: 25%;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 2rem;
+	padding: 1rem;
+	/* border: 1px solid black; */
+}
+
+nav #reg-and-log .btn-reg,
+nav #reg-and-log1 .btn-reg {
+	padding: 1rem;
+	width: 50%;
+	height: 100%;
+	border-radius: 0.4rem;
+	text-wrap: nowrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+nav #reg-and-log #btn1,
+nav #reg-and-log1 #btn1 {
+	border: 2px solid var(--warna-kelima);
+	color: var(--warna-keempat);
+	background-color: var(--warna-kelima);
+}
+
+nav #reg-and-log #btn2,
+nav #reg-and-log1 #btn2 {
+	border: 2px solid var(--warna-keempat);
+	color: var(--warna-kelima);
+	background-color: var(--warna-keempat);
+}
+
+/* menu res */
+nav #menu-res {
+	position: relative;
+	/* border: 1px solid black; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+nav #menu-res .menu {
+	width: 80%;
+	height: 80%;
+}
+
+nav #menu-res #linking-res {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	top: 100%;
+	right: 0;
+	width: 500%;
+	background-color: var(--warna-keempat);
+	border: 0.1rem solid var(--warna-kelima);
+	border-radius: 0.4rem;
+}
+
+nav #menu-res #linking-res a {
+	padding: 2.2rem 2.5rem;
+	font-size: 1.5rem;
+	text-decoration: none;
+	transition: all 0.3s;
+	color: var(--warna-kelima);
+}
+
+nav #menu-res #linking-res a:hover {
+	background-color: var(--warna-kelima);
+	color: var(--warna-keempat);
+}
+
+nav #menu-res #linking-res a div {
+	display: flex;
+	gap: 0.5rem;
+}
+
+nav #menu-res #linking-res #reg-and-log {
+	/* border: 1px solid black; */
+	width: 100%;
+}
+
+nav #menu-res #linking-res #reg-and-log button {
+	padding: 1rem;
+}
+
+nav #menu-res #linking-res #reg-and-log #btn2 {
+	border: 0.1rem solid var(--warna-kelima);
+}
+
+/*  */
+
+/* navbar selesai */
+
+
+
+/* content */
+body #content {
+    width: 100%;
+}
+body header {
+	position: relative;
+	width: 100%;
+	height: 75vh;
+	display: flex;
+	flex-direction: column;
+	/* border: 1px solid red; */
+    padding: 7rem;
+    /* gap: rem; */
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* slider */
+body #content #slider {
+    width: 100%;
+    height: 100%;
+    border: 1px solid blue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0%;
+    z-index: 0;
+    background-color: var(--warna-kelima);
+    /* opacity: 0.10; */
+    /* overflow: hidden; */
+    z-index: -10;
+    animation: scroll linear infinite alternate 105s;
+}
+
+body #content #slider #sliders {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* z-index: 1; */
+    /* background-color: aqua; */
+}
+
+body #content #slider #sliders div {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    /* background-color: bisque; */
+    /* border: 1px solid black; */
+}
+
+body #content #slider #sliders div img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: 0%; */
+}
+
+body #content #slider #sliders div .opc {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color:#000;
+    /* border: 100px solid black; */
+    top: 0;
+    /* left: 0; */
+    opacity: 0.7;
+}
+
+@keyframes scroll {
+    0% {
+        left: 0%;
+    }
+    20% {
+        left: -120% ;
+    }
+    40% {
+        left: -240%; 
+    }
+
+    60% {
+        left: -400%;
+    }
+    
+}
+
+
+/* desc */
+body #content #desc {
+    /* background-color: 1px solid red; */
+	width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    color: var(--warna-keempat);
+    gap: 1.2rem;
+    z-index: 1;
+}
+
+body #content #desc div {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    
+}
+
+body #content #desc img {
+    width: 15%;
+}
+
+body #content #desc h1 {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+body #content #desc p {
+    font-size: 1.2rem;
+} 
+
+/* main */
+
+#content main {
+    width: 100%;
+    /* height: 130vh; */
+    position: relative;
+	display: flex;
+	/* border: 1px solid red; */
+}
+
+#content main #logo-ttl {
+	width: 100%;
+	/* border: 1px solid red; */
+	display: flex;
+	position: relative;
+	align-items: center;
+	/* animation: muncul1 0.9s ease;
+	animation-timeline: scroll(); */
+}
+
+#content main #logo-ttl section {
+	width: 50%;
+	/* border: 1px solid red; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	align-items: start;
+}
+
+#content main #logo-ttl #logo-tptu {
+	z-index: 1;
+	background-color: var(--warna-keempat);
+	/* display: none; */
+}
+
+#content main #logo-ttl #logo-tptu img {
+	display: flex;
+	object-position: center;
+	width: 100%;
+	animation: putar 10s infinite linear;
+	transform-origin: center;
+	filter: hue-rotate(90deg);
+	/* border: 1px solid black; */
+}
+#content main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+}
+
+#content main #logo-ttl #desc-tptu {
+	/* animation: muncul2 0.5s ease;
+	animation-timeline: scroll(); */
+	position: absolute;
+	left: 50%;
+	z-index: -1;
+}
+
+#content main #logo-ttl #desc-tptu h1{
+	font-size:12rem ;
+	font-weight: 650;
+	letter-spacing: 5rem;
+}
+
+#content main #logo-ttl #desc-tptu h3 {
+	text-indent: 1rem;
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+
+#content main #jumlah {
+	width: 90%;
+	padding: 0rem 0rem 4rem 0rem;
+	font-size: 2rem;
+	display: flex;
+	justify-content: space-evenly;
+	/* animation: muncul1 0.9s ease;
+	animation-timeline: scroll(); */
+}
+
+#content main hr {
+	border: 1px solid var(--warna-kelima);
+}
+
+#content main #jumlah .header-j {
+	/* border: 1px solid red; */
+	padding: 2rem;
+	width: 70%;
+	display: flex; 
+	gap: 1rem;
+	flex-direction: column;
+}
+
+
+#content main #jumlah .header-j .header-in,
+#content main #jumlah .header-j .header-h {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+
+#content main #jumlah .header-j .header-in {
+	border-top: 1px solid var(--warna-kelima);
+
+}
+
+
+#content main #des-tptu {
+	width: 80%;
+	/* border: 2px solid red; */
+	font-size: 1.5rem;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	/* animation: muncul1 0.9s ease;
+	animation-timeline: scroll(); */
+}
+
+#content main #des-tptu h4 {
+	/* animation: muncul3 0.9s ease;
+	animation-timeline: scroll(); */
+	position: relative;
+	/* bottom: 100%; */
+}
+
+#content main #hal {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+} 
+
+#content main #hal #judul-hal{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	font-size: 4.5rem;
+	padding: 3rem 0rem;
+}
+
+#content main #tugas-tptu {
+	padding: 5rem;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	/* grid-template-rows: repeat(2,1fr); */
+	gap: 2rem;
+}
+
+#content main #tugas-tptu section {
+	border: 1px solid var(--warna-kelima);
+	display: flex;
+	position: relative;
+	/* height: 20rem; */
+	flex-direction: column;
+	align-items: center;
+	border-radius: 6px;
+	text-align: center;
+	padding: 5rem 3rem;
+	gap: 2rem;
+	transition: all 0.5s;
+	background-color: var(--warna-keempat);
+	animation: muncul1 0.9s ease;
+	animation-timeline: scroll(0% 50%);
+}
+
+#content main #tugas-tptu section:hover  {
+	transform: scale(1.1);
+	background-color: var(--warna-pertama);
+	color: var(--warna-keempat);
+	border: 1px solid var(--warna-pertama);
+	z-index: 1 ;
+}
+
+#content main #tugas-tptu section div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	/* border: 1px solid black; */
+	align-items: center;
+}
+
+#content main #tugas-tptu section .number-t {
+	position: absolute;
+	top: -5%;
+	border-radius: 50%;
+	font-size: 2rem;
+	width: 7rem;
+	height: 7rem;
+	background-color: var(--warna-kelima);
+	color: var(--warna-keempat);
+}
+
+#content main #tugas-tptu section .icn-t {
+	font-size: 9rem;
+}
+
+#content main #tugas-tptu section .title-t {
+	font-size: 1.5rem;
+	display: flex;
+}
+
+#content main #tugas-tptu section .desc-t {
+	font-size: 1.2rem;
+}
+
+#content main #hal2 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+	overflow: hidden;
+}
+
+#content main #hal2 section {
+	width: 90%;
+
+	/* border: 2px solid var(--warna-pertama); */
+}
+	
+
+#content main #hal2 #judul-hal2 {
+	display: flex;
+	justify-content: center;
+}
+
+#content main #hal2 #judul-hal2 h1 {
+	font-size: 4.5rem ;
+	padding: 3rem 0rem;
+}
+
+#content main #hal2 #pekerjaan {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+}
+
+#pekerjaan .pekerjaan-kn,
+#pekerjaan .pekerjaan-kr {
+	position: relative;
+	border: 2px solid var(--warna-pertama);
+	border-radius: 5px;
+	width:100%;
+	display: flex;
+	/* border: 1px solid black; */
+}
+
+#pekerjaan  .ss-kn,
+#pekerjaan  .ss-kr {
+	/* border: 1px solid red; */
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 12rem 5rem;
+}
+
+#pekerjaan  .ss-kr:nth-child(even) .ttl-pkrj {
+	display: flex;
+	justify-content: start;
+	width: 100%;
+	font-size: 5rem;
+}
+
+#pekerjaan  .ss-kr:nth-child(odd) .ttl-pkrj {
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	font-size: 5rem;
+}
+
+#pekerjaan  .ss-kr:nth-child(even) .desc-pkrj {
+	display: flex;
+	justify-content: start;
+	width: 100%;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+#pekerjaan  .ss-kr:nth-child(odd) .desc-pkrj {
+	display: flex;
+	justify-content: end;
+	text-align: end;
+	width: 100%;
+	font-size: 1.4rem;
+	font-weight: 400;
+} 
+
+#pekerjaan  .ss-kn:nth-child(even) .foto-pkrj {
+	width: 50%;
+	height: 90%;
+	border: 3px solid var(--warna-kelima);
+	box-shadow: 0px 0px 40px 15px var(--warna-kelima);
+	position: absolute;
+	right: -2%;
+	bottom: 5%;
+	display: flex;
+	justify-content: center;
+	border-radius:10px ;
+	overflow: hidden;
+}
+
+#pekerjaan  .ss-kn:nth-child(even) .foto-pkrj img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#pekerjaan  .ss-kn:nth-child(odd) .foto-pkrj {
+	width: 50%;
+	height: 80%;
+	border: 3px solid var(--warna-pertama);
+	box-shadow: 0px 0px 50px 20px var(--warna-pertama);
+	position: absolute;
+	left: -2%;
+	bottom: 10%;
+	display: flex;
+	justify-content: center;
+	border-radius:10px ;
+	overflow: hidden;
+}
+
+
+#pekerjaan  .ss-kn:nth-child(odd) .foto-pkrj img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+main #hal3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+main #hal3 h1 {
+
+	font-size: 4.5rem ;
+	padding: 3rem 0rem;
+}
+
+main #foto-hal-tptu {
+	width: 100%;
+	/* height: 40vh; */
+	display: grid;
+	grid-template-columns: repeat(3,0.9fr);
+	/* grid-template-rows: repeat(2,1fr); */
+	padding:3rem ;
+	gap: 1rem;
+}
+
+main #foto-hal-tptu section img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: grayscale(100%);
+	transition: all 0.4s;
+}
+
+main #foto-hal-tptu section{
+transition: all 0.4s;
+}
+
+main #foto-hal-tptu section:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 3px var(--warna-pertama);
+  z-index: 1;
+}
+
+main #hal4 {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 100%;
+	padding: 5rem;
+}
+
+main #hal4 #heading-hal {
+	display: flex;
+	justify-content: center;
+	font-size: 4.5rem ;
+	padding: 3rem 0rem;
+}
+
+main #hal4 #wrapper-hal4 {
+	width: 100%;
+	justify-content: space-evenly;
+	display: flex;
+	gap: 2rem;
+}
+
+main #hal4 .wrapper-kelas {
+	position: relative;
+	display: flex;
+	text-decoration: none;
+	color: var(--warna-kelima);
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 5rem;
+	border-radius: 7px;
+	border: 1px solid black;
+	width: 40%;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+
+main #hal4 .wrapper-kelas div {
+	scale: 0;
+	z-index: -1;
+	position: absolute;
+	width: 70rem;
+	height: 70rem;
+	border-radius: 50%;
+	background-color: var(--warna-kelima);
+	transition: all 0.5s;
+}
+
+main #hal4 .wrapper-kelas:hover {
+	color: var(--warna-keempat);
+}
+
+main #hal4 .wrapper-kelas:hover div {
+	scale: 1;
+}
+
+main #hal4 .wrapper-kelas section h1 {
+	font-size: 3rem;
+}
+
+
+
+
+/* content selesai */
+
+
+/* footer */
+footer {
+	width: 100%;
+	background-color: var(--warna-kelima);
+	padding: 20px;
+	text-align: center;
+	color: var(--warna-keempat);
+	display: grid;
+	justify-content: space-between;
+	padding: 4rem;
+	display: grid;
+	grid-template-areas: 
+	  "atas atas"
+	  "bawah bawah"
+	;
+	grid-template-columns: 1fr;
+  }
+  
+  
+  footer #wrapper-all {
+	width: 100%;
+	grid-area: atas;
+	display: flex; 
+	justify-content: space-evenly;
+	gap:4rem ;
+  }
+  
+  footer .data {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 0.5rem;
+	font-size: 1.4rem;
+  }
+  
+  footer .wrapper-data {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	/* border: 1px solid black; */
+	gap: 1rem;
+  }
+  
+  footer .wrapper-data h3 {
+	 width: 100%;
+	 text-align: center;
+  }
+  
+  footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-aroun;
+  }
+  footer li {
+	margin: 0 10px;
+  }
+  footer a {
+	color: #fff;
+	text-decoration: none;
+  }
+  footer a:hover {
+	text-decoration: underline;
+  }
+  footer .copyright {
+	width: inherit;
+	grid: bawah;
+	display: flex;
+	justify-content: center;
+	background-color: var(--warna-kelima);
+	margin-top: 20px;
+	font-size: 14px;
+	/* border: 1px solid black; */
+	padding: 1rem;
+  }
+  
+  
+  
+
+main #foto-hal-tptu section:hover img {
+	filter: grayscale(0%);
+}
+
+@keyframes muncul1 {
+	from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes muncul2 {
+	from{
+		left: 0%;
+	}
+    to { left: 50%; }
+}
+
+@keyframes muncul3 {
+	from {
+		bottom: 100%;
+	}
+    to { bottom: 0%; }
+}
+
+@keyframes putar{
+	
+	to {
+		transform-origin: center;
+		transform: rotate(360deg);
+	}
+}
+
+/* content selesai */
+
+/* responsive media */
+@media (max-width: 1050px) {
+	/* navbar */
+	nav #linking,
+	nav #reg-and-log1 {
+		display: none;
+	}
+
+	nav .reg {
+		display: none;
+	}
+
+	nav #menu-res {
+		display: block;
+	}
+	/* navbar selesai */
+}
+
+/* responsive selesai */
+
+/* style selesai */

@@ -1,0 +1,144 @@
+/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap');
+
+
+:root {
+	--warna-pertama: #41a7f5;
+	--warna-kedua: #64b7f6;
+	--warna-ketiga: #90cbf9;
+	--warna-keempat: #fff;
+	--warna-kelima: #061750;
+	font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.latar-belakang {
+    background: url(IMG/WhatsApp\ Image\ 2024-11-12\ at\ 17.08.36_6917c402.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: var(--warna-kelima);
+    width: 500px;
+    padding: 4rem;
+    /* max-width: 400px; */
+    padding: 20px 30px;
+    text-align: center;
+    color: white;
+    border-radius: 5%;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    margin-bottom:15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.judul {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sub-judul {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px 3px var(--warna-kedua);
+}
+
+#wrapper-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tombol {
+    display: block;
+    width: 60%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--warna-kelima);
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: auto;
+    margin: 3rem;
+}
+
+.tombol-register {
+    background-color: #bbdffb;
+    transition: all 0.5s ease-in-out;
+}
+
+.tombol-register:hover {
+    background-color: #41a7f5;
+}
+
+
+
+.teks-bawah {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.teks-bawah {
+    font-size: 1.3rem;
+    /* margin-top: 15px; */
+    text-align: center;
+    color: white;
+    display: inline-block; 
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    margin: 1.5rem auto;
+}
+
+.teks-bawah a {
+    color: var(--warna-pertama);
+    font-size: inherit;
+    text-decoration: none;
+    margin-left: 2px; 
+    display: inline;
+    vertical-align: middle;
+    padding: 0;
+    transition: all 0.6s;
+}
+
+.teks-bawah a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,463 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap");
+
+/* Font 2 */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap");
+
+/* Fonts poppins */
+.poppins-medium {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* FOnts regular */
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* root */
+:root {
+  --warna-pertama: #41a7f5;
+  --warna-kedua: #64b7f6;
+  --warna-ketiga: #90cbf9;
+  --warna-keempat: #fff;
+  --warna-kelima: #0747a1;
+  --primary: #64b7f6;
+  --secondary: #41a7f5;
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+  /* padding: 20px; */
+}
+
+/* Navbar */
+body nav {
+  width: 100%;
+  background-color: var(--warna-pertama);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.9rem;
+}
+
+/* logo */
+nav #logo {
+  width: 25%;
+  /* border: 1px solid black; */
+}
+
+nav #logo img {
+  width: 70px;
+}
+
+/* linking */
+nav #linking {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  /* border: 1px solid black; */
+}
+
+nav #linking .linking-menu {
+  transition: all 0.4s;
+  position: relative;
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem;
+  /* border: 1px solid black; */
+  text-decoration: none;
+  color: var(--warna-kelima);
+}
+
+nav #linking .linking-menu div {
+  display: flex;
+  gap: 0.6rem;
+}
+
+nav #linking .linking-menu div:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0.6rem;
+  border-radius: 20px;
+  background-color: var(--warna-keempat);
+  left: 0%;
+  bottom: -10%;
+  transition: all 0.4s;
+}
+
+nav #linking .linking-menu:hover {
+  color: var(--warna-keempat);
+}
+
+nav #linking .linking-menu:hover div:after {
+  width: 100%;
+}
+
+/* reg and log */
+nav #reg-and-log,
+nav #reg-and-log1 {
+  width: 25%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  /* border: 1px solid black; */
+}
+
+nav #reg-and-log .btn-reg,
+nav #reg-and-log1 .btn-reg {
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  border-radius: 0.4rem;
+  text-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav #reg-and-log #btn1,
+nav #reg-and-log1 #btn1 {
+  border: 2px solid var(--warna-kelima);
+  color: var(--warna-keempat);
+  background-color: var(--warna-kelima);
+}
+
+nav #reg-and-log #btn2,
+nav #reg-and-log1 #btn2 {
+  border: 2px solid var(--warna-keempat);
+  color: var(--warna-kelima);
+  background-color: var(--warna-keempat);
+}
+
+/* menu res */
+nav #menu-res {
+  position: relative;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+nav #menu-res .menu {
+  width: 80%;
+  height: 80%;
+}
+
+nav #menu-res #linking-res {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  top: 100%;
+  right: 0;
+  width: 500%;
+  background-color: var(--warna-keempat);
+  border: 0.1rem solid var(--warna-kelima);
+  border-radius: 0.4rem;
+}
+
+nav #menu-res #linking-res a {
+  padding: 2.2rem 2.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  color: var(--warna-kelima);
+}
+
+nav #menu-res #linking-res a:hover {
+  background-color: var(--warna-kelima);
+  color: var(--warna-keempat);
+}
+
+nav #menu-res #linking-res a div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+nav #menu-res #linking-res #reg-and-log {
+  /* border: 1px solid black; */
+  width: 100%;
+}
+
+nav #menu-res #linking-res #reg-and-log button {
+  padding: 1rem;
+}
+
+nav #menu-res #linking-res #reg-and-log #btn2 {
+  border: 0.1rem solid var(--warna-kelima);
+}
+/* Navbar end */
+
+/* container button */
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+
+}
+
+/* tombol back */
+.back-btn {
+  /* position: fixed; */
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.back-btn a {
+  color: #333;
+  font-size: 25px;
+}
+
+.back-btn a:hover {
+  color: blue;
+}
+
+/* next-btn */
+.next-btn {
+  top: 20px;
+  left: 20px;
+  gap: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.next-btn a {
+  color: #333;
+  font-size: 25px;
+}
+
+.next-btn a:hover {
+  color: blue;
+}
+
+/* container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: "Poppins", serif;
+  margin-top: 10px;
+}
+
+/* Kelas css */
+.kelas {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  border: 1px solid #010101;
+  transition: transform 0.2s;
+}
+
+/* kelas span */
+.kelas p span {
+  color: crimson;
+}
+
+.kelas p span:hover {
+  color: dodgerblue;
+  cursor: default;
+}
+
+/* efek hover pada div kelas */
+.kelas:hover {
+  transform: translateY(-5px);
+  border-color: dodgerblue;
+}
+
+/* Popup tooltip */
+.kelas::after {
+  /* content: attr(data-tooltip); */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+/* tampilkan tooltip hover */
+.kelas:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.kelas p {
+  padding: 5px;
+}
+
+/* Footer */
+/* footer {
+  margin-top: 300px;
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 10em;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: darkblue;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-size: large;
+  text-decoration: none;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer .credit p {
+  font-size: medium;
+}
+
+.icn {
+  font-size: 30px;
+} */
+
+footer {
+  width: 100%;
+  background-color: var(--warna-kelima);
+  padding: 20px;
+  text-align: center;
+  color: var(--warna-keempat);
+  display: grid;
+  justify-content: space-between;
+  padding: 4rem;
+  display: grid;
+  grid-template-areas: 
+    "atas atas"
+    "bawah bawah"
+  ;
+  grid-template-columns: 1fr;
+}
+
+footer #wrapper-all {
+  width: 100%;
+  grid-area: atas;
+  display: flex; 
+  justify-content: space-evenly;
+  gap:4rem ;
+}
+
+footer .data {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+footer .wrapper-data {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* border: 1px solid black; */
+  gap: 1rem;
+}
+
+footer .wrapper-data h3 {
+   width: 100%;
+   text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-aroun;
+}
+footer li {
+  margin: 0 10px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .copyright {
+  width: inherit;
+  grid: bawah;
+  display: flex;
+  justify-content: center;
+  background-color: var(--warna-kelima);
+  margin-top: 20px;
+  font-size: 14px;
+  /* border: 1px solid black; */
+  padding: 1rem;
+}
+
+
